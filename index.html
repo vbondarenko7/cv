@@ -11,7 +11,7 @@
 <meta property="og:description" content="Project manager с 9-летним предпринимательским треком и фокусом на AI-воркфлоу.">
 <meta name="twitter:card" content="summary">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root{
   --bg:#0c0c0c;
@@ -66,6 +66,8 @@ section{margin-top:64px;}
   margin-bottom:26px;
 }
 
+.section-hint{font-family:var(--sans);font-style:italic;font-size:12px;color:var(--dim);margin-top:-18px;margin-bottom:24px;}
+
 .lead{font-size:17px;line-height:1.72;color:#cfcfcf;}
 
 /* ---------- stack ---------- */
@@ -93,7 +95,7 @@ section{margin-top:64px;}
 .entry-title{font-size:18px;font-weight:600;color:#fff;letter-spacing:-.01em;}
 .entry-toggle{font-family:var(--mono);font-size:18px;line-height:1;color:var(--accent);flex:none;}
 .entry-toggle::before{content:"+";}
-.entry-head[aria-expanded="true"] .entry-toggle::before{content:"\2212";}
+.entry.open .entry-toggle::before{content:"\2212";}
 .entry-meta{display:block;font-family:var(--mono);font-size:12.5px;color:var(--dim);margin-top:7px;letter-spacing:.02em;}
 .entry-teaser{display:block;font-size:15.5px;color:var(--muted);margin-top:9px;}
 
@@ -102,7 +104,7 @@ section{margin-top:64px;}
   grid-template-rows:0fr;
   transition:grid-template-rows .34s cubic-bezier(.4,0,.2,1);
 }
-.entry-head[aria-expanded="true"] + .entry-body{grid-template-rows:1fr;}
+.entry.open .entry-body{grid-template-rows:1fr;}
 .entry-body-inner{overflow:hidden;min-height:0;}
 .entry-body-content{padding-top:4px;padding-bottom:26px;}
 
@@ -123,10 +125,9 @@ section{margin-top:64px;}
 .entry-link{margin-top:16px;font-family:var(--mono);font-size:13px;}
 .entry-link a{word-break:break-all;}
 
-/* ---------- standalone link card (threads) ---------- */
-.flat{border-top:1px solid var(--faint);padding:22px 0;}
-.flat-title{font-size:18px;font-weight:600;color:#fff;letter-spacing:-.01em;}
-.flat-link{margin-top:9px;font-family:var(--mono);font-size:13.5px;}
+/* ---------- threads block ---------- */
+.entry-head.is-flush{padding-bottom:10px;}
+.threads-link{font-family:var(--mono);font-size:13.5px;padding-bottom:22px;}
 
 /* ---------- education ---------- */
 .edu-block p{color:#c4c4c4;}
@@ -197,10 +198,11 @@ footer a{color:var(--muted);}
 
   <section>
     <div class="section-title">Предпринимательские проекты</div>
+    <div class="section-hint">→ клик на блок раскрывает подробности</div>
     <div class="entries">
 
-      <div class="entry">
-        <button class="entry-head" aria-expanded="false" aria-controls="e-wine">
+      <div class="entry open">
+        <button class="entry-head" aria-expanded="true" aria-controls="e-wine">
           <span class="entry-title-row"><span class="entry-title">Wine Run Porto</span><span class="entry-toggle" aria-hidden="true"></span></span>
           <span class="entry-meta">Основатель · 2025 — настоящее время</span>
           <span class="entry-teaser">Квест по Порту для туристов → финиш в винном баре + сувенирные медали. Собрал в одиночку на AI-стеке.</span>
@@ -250,10 +252,11 @@ footer a{color:var(--muted);}
 
   <section>
     <div class="section-title">Личные проекты</div>
+    <div class="section-hint">→ клик на блок раскрывает подробности</div>
     <div class="entries">
 
-      <div class="entry">
-        <button class="entry-head" aria-expanded="false" aria-controls="e-bro">
+      <div class="entry open">
+        <button class="entry-head" aria-expanded="true" aria-controls="e-bro">
           <span class="entry-title-row"><span class="entry-title">AI-консалтинг для реального бизнеса</span><span class="entry-toggle" aria-hidden="true"></span></span>
           <span class="entry-meta">Германия · 2026, в процессе</span>
           <span class="entry-teaser">Внедряю AI-воркфлоу в реальный бизнес (солнечные панели + отделка). Личная инициатива.</span>
@@ -306,9 +309,16 @@ footer a{color:var(--muted);}
         </div>
       </div>
 
-      <div class="flat">
-        <div class="flat-title">Threads — блог про AI в реальной работе</div>
-        <div class="flat-link"><a href="https://www.threads.com/@vbondarenko_">@vbondarenko_</a></div>
+      <div class="entry">
+        <button class="entry-head is-flush" aria-expanded="false" aria-controls="e-threads">
+          <span class="entry-title-row"><span class="entry-title">Threads — блог про AI в реальной работе</span><span class="entry-toggle" aria-hidden="true"></span></span>
+        </button>
+        <div class="threads-link"><a href="https://www.threads.com/@vbondarenko_">@vbondarenko_</a></div>
+        <div class="entry-body" id="e-threads" role="region">
+          <div class="entry-body-inner"><div class="entry-body-content">
+            <p><strong>Daily content pipeline:</strong> настроил scheduled task в Claude Cowork — дважды в день автоматически собирает AI-новости и добавляет в Notion-базу с метаданными. Из базы выбираю темы и публикую в Threads. Полный AI-аугментированный content workflow, работает без меня.</p>
+          </div></div>
+        </div>
       </div>
 
     </div>
@@ -316,10 +326,11 @@ footer a{color:var(--muted);}
 
   <section>
     <div class="section-title">Опыт работы</div>
+    <div class="section-hint">→ клик на блок раскрывает подробности</div>
     <div class="entries">
 
-      <div class="entry">
-        <button class="entry-head" aria-expanded="false" aria-controls="e-kb">
+      <div class="entry open">
+        <button class="entry-head" aria-expanded="true" aria-controls="e-kb">
           <span class="entry-title-row"><span class="entry-title">Workflow &amp; Content Manager</span><span class="entry-toggle" aria-hidden="true"></span></span>
           <span class="entry-meta">«Как Боги: Виртуальная Церковь» (YouTube-канал) · 2024&ndash;2025</span>
           <span class="entry-teaser">Спроектировал AI-воркфлоу полного цикла для ежедневного YouTube-производства.</span>
@@ -384,8 +395,9 @@ footer a{color:var(--muted);}
 <script>
   document.querySelectorAll('.entry-head').forEach(function(btn){
     btn.addEventListener('click', function(){
-      var open = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!open));
+      var entry = btn.closest('.entry');
+      var open = entry.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
     });
   });
 </script>
