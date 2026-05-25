@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Вадим Бондаренко — Project Manager / AI Workflow Engineer</title>
+<meta name="description" content="Project manager с 9-летним предпринимательским треком и фокусом на AI-воркфлоу. Основатель Lion Race и Wine Run Porto.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vbondarenko7.github.io/cv/">
+<meta property="og:title" content="Вадим Бондаренко — Project Manager / AI Workflow Engineer">
+<meta property="og:description" content="Project manager с 9-летним предпринимательским треком и фокусом на AI-воркфлоу.">
+<meta name="twitter:card" content="summary">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root{
+  --bg:#0c0c0c;
+  --text:#e6e6e6;
+  --muted:#9a9a9a;
+  --dim:#6b6b6b;
+  --faint:#1d1d1d;
+  --accent:#F59E0B;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+::selection{background:rgba(245,158,11,.25);color:#fff;}
+
+a{color:var(--accent);text-decoration:none;}
+
+main{max-width:680px;margin:0 auto;padding:96px 28px 40px;}
+
+/* ---------- header ---------- */
+.name{
+  font-size:clamp(30px,6vw,40px);
+  font-weight:600;
+  letter-spacing:-.02em;
+  line-height:1.1;
+  color:#fff;
+}
+.role{margin-top:12px;font-size:16px;color:var(--muted);}
+.header-link{margin-top:14px;font-family:var(--mono);font-size:13.5px;color:var(--dim);}
+
+/* ---------- sections ---------- */
+section{margin-top:64px;}
+.section-title{
+  font-family:var(--mono);
+  font-size:12px;
+  font-weight:500;
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  color:var(--dim);
+  margin-bottom:26px;
+}
+
+.lead{font-size:17px;line-height:1.72;color:#cfcfcf;}
+
+/* ---------- stack ---------- */
+.stack-group{margin-bottom:18px;}
+.stack-group:last-child{margin-bottom:0;}
+.stack-label{color:#fff;font-weight:600;font-size:15px;}
+.stack-items{color:var(--muted);margin-top:3px;}
+
+/* ---------- entries / accordion ---------- */
+.entry{border-top:1px solid var(--faint);}
+.entry:first-child{border-top:none;}
+
+.entry-head{
+  display:block;
+  width:100%;
+  text-align:left;
+  background:none;
+  border:none;
+  color:inherit;
+  font:inherit;
+  cursor:pointer;
+  padding:22px 0;
+}
+.entry-title-row{display:flex;align-items:baseline;justify-content:space-between;gap:16px;}
+.entry-title{font-size:18px;font-weight:600;color:#fff;letter-spacing:-.01em;}
+.entry-toggle{font-family:var(--mono);font-size:18px;line-height:1;color:var(--accent);flex:none;}
+.entry-toggle::before{content:"+";}
+.entry-head[aria-expanded="true"] .entry-toggle::before{content:"\2212";}
+.entry-meta{display:block;font-family:var(--mono);font-size:12.5px;color:var(--dim);margin-top:7px;letter-spacing:.02em;}
+.entry-teaser{display:block;font-size:15.5px;color:var(--muted);margin-top:9px;}
+
+.entry-body{
+  display:grid;
+  grid-template-rows:0fr;
+  transition:grid-template-rows .34s cubic-bezier(.4,0,.2,1);
+}
+.entry-head[aria-expanded="true"] + .entry-body{grid-template-rows:1fr;}
+.entry-body-inner{overflow:hidden;min-height:0;}
+.entry-body-content{padding-top:4px;padding-bottom:26px;}
+
+.field + .field{margin-top:15px;}
+.field-label{
+  display:block;
+  font-family:var(--mono);
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  color:var(--muted);
+  margin-bottom:6px;
+}
+.entry-body-content p{color:#c4c4c4;}
+.entry-body-content ul{list-style:none;margin-top:4px;}
+.entry-body-content li{color:#c4c4c4;position:relative;padding-left:20px;margin-top:8px;}
+.entry-body-content li::before{content:"\2013";position:absolute;left:0;color:var(--dim);}
+.entry-link{margin-top:16px;font-family:var(--mono);font-size:13px;}
+.entry-link a{word-break:break-all;}
+
+/* ---------- standalone link card (threads) ---------- */
+.flat{border-top:1px solid var(--faint);padding:22px 0;}
+.flat-title{font-size:18px;font-weight:600;color:#fff;letter-spacing:-.01em;}
+.flat-link{margin-top:9px;font-family:var(--mono);font-size:13.5px;}
+
+/* ---------- education ---------- */
+.edu-block p{color:#c4c4c4;}
+.edu-block p + p{margin-top:13px;}
+strong{color:#e6e6e6;font-weight:600;}
+
+/* ---------- contacts ---------- */
+.contacts{font-family:var(--mono);font-size:14px;}
+.contact-row{display:flex;gap:14px;margin-top:11px;flex-wrap:wrap;}
+.contact-row:first-child{margin-top:0;}
+.contact-key{color:var(--dim);min-width:96px;flex:none;}
+.contact-val{color:var(--text);}
+
+/* ---------- footer ---------- */
+footer{
+  max-width:680px;
+  margin:80px auto 0;
+  padding:32px 28px 80px;
+  border-top:1px solid var(--faint);
+  font-family:var(--mono);
+  font-size:12.5px;
+  color:var(--dim);
+}
+footer a{color:var(--muted);}
+
+@media (max-width:560px){
+  main{padding:64px 20px 32px;}
+  footer{padding:32px 20px 64px;}
+}
+@media (prefers-reduced-motion:reduce){
+  .entry-body{transition:none;}
+}
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <h1 class="name">Вадим Бондаренко</h1>
+    <div class="role">Project Manager / AI Workflow Engineer</div>
+    <div class="header-link">Telegram: <a href="https://t.me/vad6272">@vad6272</a></div>
+  </header>
+
+  <section>
+    <div class="section-title">Кратко</div>
+    <p class="lead">Project manager с 9-летним предпринимательским треком — основатель Lion Race (2016&ndash;2021, до 1000 участников/ивент) и Wine Run Porto (2025&ndash;now). 6 лет параллельно в международной фарм-компании. С 2024 — фокус на AI-воркфлоу: спроектировал и операционно вёл production-пайплайн для YouTube-канала «Как Боги», ежедневно работаю через Claude + собственные Claude Skills + Claude Code + Notion.</p>
+  </section>
+
+  <section>
+    <div class="section-title">Стек / Инструменты</div>
+    <div class="stack-group">
+      <div class="stack-label">AI &amp; автоматизация</div>
+      <div class="stack-items">Claude (продвинутый — API, собственные Claude Skills, agentic workflows), Claude Code, Anthropic API, MCP, Notion как операционная система, Lovable, Cursor, mlx-whisper, whisper.cpp.</div>
+    </div>
+    <div class="stack-group">
+      <div class="stack-label">Контент-производство</div>
+      <div class="stack-items">YouTube SEO, превью-стратегия, копирайтинг, сценарии short-form (Reels/Shorts), email-кампании, мультиплатформенный выпуск.</div>
+    </div>
+    <div class="stack-group">
+      <div class="stack-label">Технический стек (через AI)</div>
+      <div class="stack-items">SwiftUI + WidgetKit, Xcode, xcodegen, GitHub Pages, Stripe, Hammerspoon (Lua), bash.</div>
+    </div>
+    <div class="stack-group">
+      <div class="stack-label">Операционка</div>
+      <div class="stack-items">управление командами и подрядчиками, переговоры с партнёрами, бюджетирование, продакшн ивентов, sourcing.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Предпринимательские проекты</div>
+    <div class="entries">
+
+      <div class="entry">
+        <button class="entry-head" aria-expanded="false" aria-controls="e-wine">
+          <span class="entry-title-row"><span class="entry-title">Wine Run Porto</span><span class="entry-toggle" aria-hidden="true"></span></span>
+          <span class="entry-meta">Основатель · 2025 — настоящее время</span>
+          <span class="entry-teaser">Квест по Порту для туристов → финиш в винном баре + сувенирные медали. Собрал в одиночку на AI-стеке.</span>
+        </button>
+        <div class="entry-body" id="e-wine" role="region">
+          <div class="entry-body-inner"><div class="entry-body-content">
+            <div class="field"><span class="field-label">Задача</span><p>Запустить продуктовый формат для туристов в Порту — регистрация на сайте → квест по городу → финиш в винном ресторане → бокал вина + сувенирная медаль уровня Олимпийских игр.</p></div>
+            <div class="field"><span class="field-label">Решение</span>
+              <ul>
+                <li>Разработал концепт и продуктовую идентичность.</li>
+                <li>Самостоятельно собрал сайт через AI-стек (Lovable), без разработчиков. Интегрировал Stripe для приёма платежей.</li>
+                <li>Sourcing медалей через Китай (производство, контроль качества, логистика).</li>
+                <li>Партнёрские переговоры — нашёл и закрепил винный бар как площадку финиша.</li>
+                <li>Бюджет ~€1500 (личные средства).</li>
+                <li>Запуск синхронизирован с открытием бар-партнёра — август 2026.</li>
+              </ul>
+            </div>
+            <p class="entry-link">Сайт: <a href="https://preview--run-wine-porto-web.lovable.app/">preview--run-wine-porto-web.lovable.app</a></p>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <button class="entry-head" aria-expanded="false" aria-controls="e-lion">
+          <span class="entry-title-row"><span class="entry-title">Lion Race</span><span class="entry-toggle" aria-hidden="true"></span></span>
+          <span class="entry-meta">Основатель · 2016&ndash;2021</span>
+          <span class="entry-teaser">Ежегодные забеги с препятствиями до 1000 участников. Полный цикл, 5 операционных циклов.</span>
+        </button>
+        <div class="entry-body" id="e-lion" role="region">
+          <div class="entry-body-inner"><div class="entry-body-content">
+            <div class="field"><span class="field-label">Задача</span><p>Создать с нуля и проводить ежегодные забеги с препятствиями до 1000 участников. Полный цикл — концепция → партнёры → продакшн → день забега.</p></div>
+            <div class="field"><span class="field-label">Решение</span>
+              <ul>
+                <li>Запустил как самостоятельный бизнес с юридическим оформлением и налогообложением.</li>
+                <li>Операционная модель «зона → ответственный»: 9 функциональных зон-лидов + ~70 волонтёров на день забега.</li>
+                <li>Личная зона: создание сайта, маркетинг и реклама, дизайн и производство медалей, переговоры с администрацией площадки (ферма 100 га), координация фотографов, призовой фонд.</li>
+                <li>Бюджет одного ивента ~$15&ndash;20K. 5 операционных циклов.</li>
+              </ul>
+            </div>
+            <p class="entry-link">Promo: <a href="https://www.youtube.com/watch?v=IAtNYReeoAY">youtube.com/watch?v=IAtNYReeoAY</a></p>
+          </div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Личные проекты</div>
+    <div class="entries">
+
+      <div class="entry">
+        <button class="entry-head" aria-expanded="false" aria-controls="e-bro">
+          <span class="entry-title-row"><span class="entry-title">AI-консалтинг для реального бизнеса</span><span class="entry-toggle" aria-hidden="true"></span></span>
+          <span class="entry-meta">Германия · 2026, в процессе</span>
+          <span class="entry-teaser">Внедряю AI-воркфлоу в реальный бизнес (солнечные панели + отделка). Личная инициатива.</span>
+        </button>
+        <div class="entry-body" id="e-bro" role="region">
+          <div class="entry-body-inner"><div class="entry-body-content">
+            <div class="field"><span class="field-label">Задача</span><p>Помочь брату внедрить AI-воркфлоу в его бизнес (солнечные панели + внутренняя отделка). Он жаловался, что у него нет свободного времени и нет выходных — я предложил попробовать AI как операционный рычаг и сам взялся это спроектировать. Личная инициатива, не клиентский контракт.</p></div>
+            <div class="field"><span class="field-label">Решение</span>
+              <ul>
+                <li>Собрал discovery-интервью на 65 вопросов по пути заказа.</li>
+                <li>Выстроил пайплайн «голосовые ответы → расшифровка (mlx-whisper на Apple Silicon) → структурированные ответы → точки автоматизации».</li>
+                <li>Получены ответы на вопросы 1&ndash;24 из 65, ожидаем вторую партию.</li>
+              </ul>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <button class="entry-head" aria-expanded="false" aria-controls="e-lock">
+          <span class="entry-title-row"><span class="entry-title">English Lock</span><span class="entry-toggle" aria-hidden="true"></span></span>
+          <span class="entry-meta">iOS-приложение · пассивное изучение английского · 2026</span>
+          <span class="entry-teaser">Английский на экране блокировки. SwiftUI + WidgetKit, собрал сам.</span>
+        </button>
+        <div class="entry-body" id="e-lock" role="region">
+          <div class="entry-body-inner"><div class="entry-body-content">
+            <div class="field"><span class="field-label">Задача</span><p>Дать пользователю изучать английский «между делом» — каждый раз когда он берёт iPhone в руки. На экране блокировки появляется английское слово + изображение. Метод — Comprehensible Input по Krashen: пассивная экспозиция без зубрёжки.</p></div>
+            <div class="field"><span class="field-label">Решение</span>
+              <ul>
+                <li>Спроектировал и собрал MVP-виджет (SwiftUI + WidgetKit).</li>
+                <li>Развил в полноценное приложение: 421 слово, 15 тем, уровни A1&ndash;C1, 4 экрана.</li>
+                <li>Стек: Claude Code (без бэкграунда в разработке), Xcode 26, xcodegen, Phosphor Icons, GitHub.</li>
+              </ul>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <button class="entry-head" aria-expanded="false" aria-controls="e-mac">
+          <span class="entry-title-row"><span class="entry-title">Локальные AI-стеки на Mac</span><span class="entry-toggle" aria-hidden="true"></span></span>
+          <span class="entry-meta">2026</span>
+          <span class="entry-teaser">Свой voice-to-text на Mac. Daily driver.</span>
+        </button>
+        <div class="entry-body" id="e-mac" role="region">
+          <div class="entry-body-inner"><div class="entry-body-content">
+            <div class="field"><span class="field-label">Задача</span><p>Иметь собственные AI-инструменты для ежедневной работы без зависимости от облачных подписок.</p></div>
+            <div class="field"><span class="field-label">Решение</span><p>Собрал voice-to-text стек — whisper.cpp с моделью large-v3-turbo + whisper-server + Hammerspoon + sox + LaunchAgent. Аналог Wispr Flow / MacWhisper. Используется как daily driver.</p></div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="flat">
+        <div class="flat-title">Threads — блог про AI в реальной работе</div>
+        <div class="flat-link"><a href="https://www.threads.com/@vbondarenko_">@vbondarenko_</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Опыт работы</div>
+    <div class="entries">
+
+      <div class="entry">
+        <button class="entry-head" aria-expanded="false" aria-controls="e-kb">
+          <span class="entry-title-row"><span class="entry-title">Workflow &amp; Content Manager</span><span class="entry-toggle" aria-hidden="true"></span></span>
+          <span class="entry-meta">«Как Боги: Виртуальная Церковь» (YouTube-канал) · 2024&ndash;2025</span>
+          <span class="entry-teaser">Спроектировал AI-воркфлоу полного цикла для ежедневного YouTube-производства.</span>
+        </button>
+        <div class="entry-body" id="e-kb" role="region">
+          <div class="entry-body-inner"><div class="entry-body-content">
+            <div class="field"><span class="field-label">Роль</span><p>Инженер операционного потока. Зона ответственности — production reliability и AI-воркфлоу выпуска контента. Контент-стратегия и продвижение канала — вне моей зоны.</p></div>
+            <div class="field"><span class="field-label">Задача</span><p>Обеспечить бесперебойный ежедневный выпуск длинного формата на YouTube + 3 коротких видео в день на 5 платформах (Instagram, Facebook, Threads, YouTube Shorts, TikTok).</p></div>
+            <div class="field"><span class="field-label">Решение</span><p>Спроектировал и собрал AI-воркфлоу полного цикла. Транскрипт видео → пакет публикаций (заголовки, описания, теги, превью, посты в Telegram/Facebook/YT Community, сценарии Reels). Стек: Claude + собственные Claude Skills + Notion как операционная система.</p></div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <button class="entry-head" aria-expanded="false" aria-controls="e-dr">
+          <span class="entry-title-row"><span class="entry-title">Менеджер по интернет-маркетингу</span><span class="entry-toggle" aria-hidden="true"></span></span>
+          <span class="entry-meta">Dr. Reddy's Laboratories · 2019&ndash;2025</span>
+          <span class="entry-teaser">Контент-менеджмент сайта международной фармкомпании. ~60&ndash;75 единиц/месяц, 6 лет.</span>
+        </button>
+        <div class="entry-body" id="e-dr" role="region">
+          <div class="entry-body-inner"><div class="entry-body-content">
+            <div class="field"><span class="field-label">Задача</span><p>Контент-менеджмент корпоративного сайта международной фармацевтической компании.</p></div>
+            <div class="field"><span class="field-label">Решение</span>
+              <ul>
+                <li>Регулярные публикации: ~30&ndash;40 рекламных материалов для бренд-менеджеров, ~20 видео, ~10 новостей, 3&ndash;4 email-рассылки и 2 опроса ежемесячно. Суммарно ~60&ndash;75 контентных единиц в месяц.</li>
+                <li>Стабильное ведение контентного потока 6 лет, параллельно с собственными предпринимательскими проектами (Lion Race, Wine Run Porto).</li>
+              </ul>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Образование</div>
+    <div class="edu-block">
+      <p><strong>Аспирантура</strong> (без защиты диссертации) · Материаловедение и производство текстильной и лёгкой промышленности.</p>
+      <p>Сданы три кандидатских минимума: специальность, английский язык, <strong>философия</strong> (профильный интерес — структурное мышление, эпистемология).</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Контакты</div>
+    <div class="contacts">
+      <div class="contact-row"><span class="contact-key">Email</span><span class="contact-val"><a href="mailto:pqp.msk.bondarenko@gmail.com">pqp.msk.bondarenko@gmail.com</a></span></div>
+      <div class="contact-row"><span class="contact-key">Telegram</span><span class="contact-val"><a href="https://t.me/vad6272">@vad6272</a></span></div>
+      <div class="contact-row"><span class="contact-key">LinkedIn</span><span class="contact-val"><a href="https://www.linkedin.com/in/vadim-bondarenko-ai/">linkedin.com/in/vadim-bondarenko-ai</a></span></div>
+      <div class="contact-row"><span class="contact-key">Instagram</span><span class="contact-val"><a href="https://www.instagram.com/vbondarenko_/">@vbondarenko_</a></span></div>
+      <div class="contact-row"><span class="contact-key">Локация</span><span class="contact-val">Remote · Европа · Двойное гражданство РФ + ЕС</span></div>
+      <div class="contact-row"><span class="contact-key">Языки</span><span class="contact-val">Русский — родной · Английский — рабочее владение в письме (читаю и пишу с помощью AI), устный — начинающий</span></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Built with Claude Code · <a href="https://github.com/vbondarenko7/cv">view source on GitHub</a>
+</footer>
+
+<script>
+  document.querySelectorAll('.entry-head').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+    });
+  });
+</script>
+
+</body>
+</html>
