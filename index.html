@@ -10,6 +10,9 @@
 <meta property="og:title" content="Вадим Бондаренко — Project Manager / AI Workflow Engineer">
 <meta property="og:description" content="Project manager с 9-летним предпринимательским треком и фокусом на AI-воркфлоу.">
 <meta name="twitter:card" content="summary">
+<link rel="alternate" hreflang="ru" href="https://vbondarenko7.github.io/cv/">
+<link rel="alternate" hreflang="en" href="https://vbondarenko7.github.io/cv/en/">
+<link rel="alternate" hreflang="x-default" href="https://vbondarenko7.github.io/cv/">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
 
@@ -41,7 +44,9 @@ body{
 
 a{color:var(--accent);text-decoration:none;}
 
-main{max-width:680px;margin:0 auto;padding:96px 28px 40px;}
+main{max-width:680px;margin:0 auto;padding:96px 28px 40px;position:relative;}
+
+.lang-switch{position:absolute;top:96px;right:28px;font-family:var(--mono);font-size:13px;color:var(--accent);letter-spacing:.05em;}
 
 /* ---------- header ---------- */
 .name{
@@ -155,6 +160,7 @@ footer a{color:var(--muted);}
 
 @media (max-width:560px){
   main{padding:64px 20px 32px;}
+  .lang-switch{top:64px;right:20px;}
   footer{padding:32px 20px 64px;}
 }
 @media (prefers-reduced-motion:reduce){
@@ -164,6 +170,7 @@ footer a{color:var(--muted);}
 </head>
 <body>
 <main>
+  <a class="lang-switch" hreflang="en" lang="en" title="English version" href="https://vbondarenko7.github.io/cv/en/">EN</a>
 
   <header>
     <h1 class="name">Вадим Бондаренко</h1>

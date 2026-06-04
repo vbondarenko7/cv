@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vadim Bondarenko — Project Manager / AI Workflow Engineer</title>
+<meta name="description" content="Project manager with a 9-year entrepreneurial track and focus on AI workflows. Founder of Lion Race and Wine Run Porto.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vbondarenko7.github.io/cv/en/">
+<meta property="og:title" content="Vadim Bondarenko — Project Manager / AI Workflow Engineer">
+<meta property="og:description" content="Project manager with a 9-year entrepreneurial track and focus on AI workflows.">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" hreflang="ru" href="https://vbondarenko7.github.io/cv/">
+<link rel="alternate" hreflang="en" href="https://vbondarenko7.github.io/cv/en/">
+<link rel="alternate" hreflang="x-default" href="https://vbondarenko7.github.io/cv/">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root{
+  --bg:#0c0c0c;
+  --text:#e6e6e6;
+  --muted:#9a9a9a;
+  --dim:#6b6b6b;
+  --faint:#1d1d1d;
+  --accent:#F59E0B;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-text-size-adjust:100%;}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+::selection{background:rgba(245,158,11,.25);color:#fff;}
+
+a{color:var(--accent);text-decoration:none;}
+
+main{max-width:680px;margin:0 auto;padding:96px 28px 40px;position:relative;}
+
+.lang-switch{position:absolute;top:96px;right:28px;font-family:var(--mono);font-size:13px;color:var(--accent);letter-spacing:.05em;}
+
+/* ---------- header ---------- */
+.name{
+  font-size:clamp(30px,6vw,40px);
+  font-weight:600;
+  letter-spacing:-.02em;
+  line-height:1.1;
+  color:#fff;
+}
+.role{margin-top:12px;font-size:16px;color:var(--muted);}
+.header-link{margin-top:14px;font-family:var(--mono);font-size:13.5px;color:var(--dim);}
+
+/* ---------- sections ---------- */
+section{margin-top:64px;}
+.section-title{
+  font-family:var(--mono);
+  font-size:12px;
+  font-weight:500;
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  color:var(--dim);
+  margin-bottom:26px;
+}
+
+.section-hint{font-family:var(--sans);font-style:italic;font-size:12px;color:var(--dim);margin-top:-18px;margin-bottom:24px;}
+
+.lead{font-size:17px;line-height:1.72;color:#cfcfcf;}
+
+/* ---------- stack ---------- */
+.stack-group{margin-bottom:18px;}
+.stack-group:last-child{margin-bottom:0;}
+.stack-label{color:#fff;font-weight:600;font-size:15px;}
+.stack-items{color:var(--muted);margin-top:3px;}
+
+/* ---------- entries / accordion ---------- */
+.entry{border-top:1px solid var(--faint);}
+.entry:first-child{border-top:none;}
+
+.entry-head{
+  display:block;
+  width:100%;
+  text-align:left;
+  background:none;
+  border:none;
+  color:inherit;
+  font:inherit;
+  cursor:pointer;
+  padding:22px 0;
+}
+.entry-title-row{display:flex;align-items:baseline;justify-content:space-between;gap:16px;}
+.entry-title{font-size:18px;font-weight:600;color:#fff;letter-spacing:-.01em;}
+.entry-toggle{font-family:var(--mono);font-size:18px;line-height:1;color:var(--accent);flex:none;}
+.entry-toggle::before{content:"+";}
+.entry.open .entry-toggle::before{content:"\2212";}
+.entry-meta{display:block;font-family:var(--mono);font-size:12.5px;color:var(--dim);margin-top:7px;letter-spacing:.02em;}
+.entry-teaser{display:block;font-size:15.5px;color:var(--muted);margin-top:9px;}
+
+.entry-body{
+  display:grid;
+  grid-template-rows:0fr;
+  transition:grid-template-rows .34s cubic-bezier(.4,0,.2,1);
+}
+.entry.open .entry-body{grid-template-rows:1fr;}
+.entry-body-inner{overflow:hidden;min-height:0;}
+.entry-body-content{padding-top:4px;padding-bottom:26px;}
+
+.field + .field{margin-top:15px;}
+.field-label{
+  display:block;
+  font-family:var(--mono);
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  color:var(--muted);
+  margin-bottom:6px;
+}
+.entry-body-content p{color:#c4c4c4;}
+.entry-body-content ul{list-style:none;margin-top:4px;}
+.entry-body-content li{color:#c4c4c4;position:relative;padding-left:20px;margin-top:8px;}
+.entry-body-content li::before{content:"\2013";position:absolute;left:0;color:var(--dim);}
+.entry-link{margin-top:16px;font-family:var(--mono);font-size:13px;}
+.entry-link a{word-break:break-all;}
+
+/* ---------- threads block ---------- */
+.entry-head.is-flush{padding-bottom:10px;}
+.threads-link{font-family:var(--mono);font-size:13.5px;padding-bottom:22px;}
+
+/* ---------- education ---------- */
+.edu-block p{color:#c4c4c4;}
+.edu-block p + p{margin-top:13px;}
+strong{color:#e6e6e6;font-weight:600;}
+
+/* ---------- contacts ---------- */
+.contacts{font-family:var(--mono);font-size:14px;}
+.contact-row{display:flex;gap:14px;margin-top:11px;flex-wrap:wrap;}
+.contact-row:first-child{margin-top:0;}
+.contact-key{color:var(--dim);min-width:96px;flex:none;}
+.contact-val{color:var(--text);}
+
+/* ---------- footer ---------- */
+footer{
+  max-width:680px;
+  margin:80px auto 0;
+  padding:32px 28px 80px;
+  border-top:1px solid var(--faint);
+  font-family:var(--mono);
+  font-size:12.5px;
+  color:var(--dim);
+}
+footer a{color:var(--muted);}
+
+@media (max-width:560px){
+  main{padding:64px 20px 32px;}
+  .lang-switch{top:64px;right:20px;}
+  footer{padding:32px 20px 64px;}
+}
+@media (prefers-reduced-motion:reduce){
+  .entry-body{transition:none;}
+}
+</style>
+</head>
+<body>
+<main>
+  <a class="lang-switch" hreflang="ru" lang="ru" title="Russian version" href="https://vbondarenko7.github.io/cv/">RU</a>
+
+  <header>
+    <h1 class="name">Vadim Bondarenko</h1>
+    <div class="role">Project Manager / AI Workflow Engineer</div>
+    <div class="header-link">Telegram: <a href="https://t.me/vad6272">@vad6272</a></div>
+  </header>
+
+  <section>
+    <div class="section-title">Summary</div>
+    <p class="lead">Project manager with a 9-year entrepreneurial track — founder of Lion Race (2016&ndash;2021, up to 1,000 participants per event) and Wine Run Porto (2025&ndash;now). Six years in parallel at an international pharma company. Since 2024 — focused on AI workflows: daily work through Claude + custom Claude Skills + Claude Code + Notion.</p>
+  </section>
+
+  <section>
+    <div class="section-title">Stack &amp; Tools</div>
+    <div class="stack-group">
+      <div class="stack-label">LLM workflow design</div>
+      <div class="stack-items">Claude (API, custom Claude Skills, agentic workflows), Claude Code, Anthropic API, MCP, prompt chains, structured outputs.</div>
+    </div>
+    <div class="stack-group">
+      <div class="stack-label">Automation &amp; orchestration</div>
+      <div class="stack-items">Notion as an operating system, Claude Cowork (scheduled tasks), bash, Hammerspoon (Lua), mlx-whisper, whisper.cpp, local voice-to-text stacks.</div>
+    </div>
+    <div class="stack-group">
+      <div class="stack-label">Content operations</div>
+      <div class="stack-items">long-form → multi-platform repurposing, YouTube SEO, thumbnail strategy, copywriting, short-form scripts (Reels/Shorts), email campaigns, QA checklists.</div>
+    </div>
+    <div class="stack-group">
+      <div class="stack-label">Product prototyping</div>
+      <div class="stack-items">Claude Code, SwiftUI + WidgetKit, Xcode, xcodegen, Lovable, Stripe, GitHub Pages.</div>
+    </div>
+    <div class="stack-group">
+      <div class="stack-label">Project operations</div>
+      <div class="stack-items">team and contractor management, partnership negotiations, budgeting, event production, sourcing.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Entrepreneurial Projects</div>
+    <div class="section-hint">→ click to collapse a block</div>
+    <div class="entries">
+
+      <div class="entry open">
+        <button class="entry-head" aria-expanded="true" aria-controls="e-wine">
+          <span class="entry-title-row"><span class="entry-title">Wine Run Porto</span><span class="entry-toggle" aria-hidden="true"></span></span>
+          <span class="entry-meta">Founder · 2025 — present</span>
+          <span class="entry-teaser">A quest through Porto for tourists → finish at a wine bar + souvenir medals. Built solo on an AI stack.</span>
+        </button>
+        <div class="entry-body" id="e-wine" role="region">
+          <div class="entry-body-inner"><div class="entry-body-content">
+            <div class="field"><span class="field-label">Challenge</span><p>Launch a product format for tourists in Porto — sign up on the website → quest through the city → finish at a wine restaurant → a glass of wine + an Olympic-grade souvenir medal.</p></div>
+            <div class="field"><span class="field-label">Solution</span>
+              <ul>
+                <li>Designed the concept and product identity.</li>
+                <li>Built the website solo through an AI stack (Lovable), no developers. Integrated Stripe for payments.</li>
+                <li>Sourced medals from China (manufacturing, QA, logistics).</li>
+                <li>Partnership negotiations — found and secured a wine bar as the finish-line venue.</li>
+                <li>Budget ~€1,500 (personal funds).</li>
+                <li>Launch synced with the bar partner's opening — August 2026.</li>
+                <li>After launch — operational load ~5&ndash;10 hours per month.</li>
+              </ul>
+            </div>
+            <p class="entry-link">Site: <a href="https://run-wine-porto-web.lovable.app/">run-wine-porto-web.lovable.app</a></p>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="entry open">
+        <button class="entry-head" aria-expanded="true" aria-controls="e-lion">
+          <span class="entry-title-row"><span class="entry-title">Lion Race</span><span class="entry-toggle" aria-hidden="true"></span></span>
+          <span class="entry-meta">Founder and head of operations · 2016&ndash;2021</span>
+          <span class="entry-teaser">Annual obstacle races with up to 1,000 participants. End-to-end, 5 operational cycles.</span>
+        </button>
+        <div class="entry-body" id="e-lion" role="region">
+          <div class="entry-body-inner"><div class="entry-body-content">
+            <div class="field"><span class="field-label">Challenge</span><p>Build from scratch and run annual obstacle races with up to 1,000 participants. End-to-end — concept → partners → production → race day.</p></div>
+            <div class="field"><span class="field-label">Solution</span>
+              <ul>
+                <li>Launched as a standalone business with a legal entity and taxation.</li>
+                <li>Operational model «zone → owner»: 9 functional zone leads + ~70 volunteers on race day.</li>
+                <li>My zone: website, marketing and ads, medal design and production, venue negotiations (100-hectare farm), photographer coordination, prize fund.</li>
+                <li>Per-event budget ~$15&ndash;20K. 5 operational cycles.</li>
+              </ul>
+            </div>
+            <p class="entry-link">Promo: <a href="https://www.youtube.com/watch?v=IAtNYReeoAY">youtube.com/watch?v=IAtNYReeoAY</a></p>
+          </div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Personal Projects</div>
+    <div class="section-hint">→ click to collapse a block</div>
+    <div class="entries">
+
+      <div class="entry open">
+        <button class="entry-head" aria-expanded="true" aria-controls="e-bro">
+          <span class="entry-title-row"><span class="entry-title">AI consulting for a non-tech business</span><span class="entry-toggle" aria-hidden="true"></span></span>
+          <span class="entry-meta">Germany · 2026, ongoing</span>
+          <span class="entry-teaser">Embedding AI workflows into a non-tech business (solar panels + interiors). Personal initiative.</span>
+        </button>
+        <div class="entry-body" id="e-bro" role="region">
+          <div class="entry-body-inner"><div class="entry-body-content">
+            <div class="field"><span class="field-label">Challenge</span><p>Help my brother embed an AI workflow into his business (solar panels + interior fit-out). He was complaining about no free time and no weekends — I proposed trying AI as an operational lever and took on the design myself. Personal initiative, not a client engagement.</p></div>
+            <div class="field"><span class="field-label">Solution</span>
+              <ul>
+                <li>Built a 65-question discovery interview covering the customer journey.</li>
+                <li>Set up a pipeline: voice answers → transcription (mlx-whisper on Apple Silicon) → structured responses → automation points.</li>
+                <li>Answers received for questions 1&ndash;24 of 65; awaiting the next batch.</li>
+              </ul>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="entry open">
+        <button class="entry-head" aria-expanded="true" aria-controls="e-lock">
+          <span class="entry-title-row"><span class="entry-title">English Lock</span><span class="entry-toggle" aria-hidden="true"></span></span>
+          <span class="entry-meta">iOS app · passive English learning · 2026</span>
+          <span class="entry-teaser">English on your lock screen. SwiftUI + WidgetKit, built solo.</span>
+        </button>
+        <div class="entry-body" id="e-lock" role="region">
+          <div class="entry-body-inner"><div class="entry-body-content">
+            <div class="field"><span class="field-label">Challenge</span><p>Let users learn English «in passing» — every time they pick up the iPhone. An English word + image appears on the lock screen. Method — Comprehensible Input per Krashen: passive exposure, no rote memorization.</p></div>
+            <div class="field"><span class="field-label">Solution</span>
+              <ul>
+                <li>Designed and built the MVP widget (SwiftUI + WidgetKit).</li>
+                <li>Grew into a full app: 421 words, 15 topics, levels A1&ndash;C1, 4 screens.</li>
+                <li>Stack: Claude Code (no dev background), Xcode 26, xcodegen, Phosphor Icons, GitHub.</li>
+              </ul>
+            </div>
+            <div class="field"><span class="field-label">Proves</span><p>I take an idea to a working artifact solo, without a dev team. Viral launch on Threads (~90k views) — social proof.</p></div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="entry open">
+        <button class="entry-head" aria-expanded="true" aria-controls="e-mac">
+          <span class="entry-title-row"><span class="entry-title">Local AI stacks on Mac</span><span class="entry-toggle" aria-hidden="true"></span></span>
+          <span class="entry-meta">2026</span>
+          <span class="entry-teaser">Own voice-to-text on Mac. Daily driver.</span>
+        </button>
+        <div class="entry-body" id="e-mac" role="region">
+          <div class="entry-body-inner"><div class="entry-body-content">
+            <div class="field"><span class="field-label">Challenge</span><p>Own AI tools for daily work, with no dependency on cloud subscriptions.</p></div>
+            <div class="field"><span class="field-label">Solution</span><p>Built a voice-to-text stack — whisper.cpp with large-v3-turbo + whisper-server + Hammerspoon + sox + LaunchAgent. An alternative to Wispr Flow / MacWhisper. Used as a daily driver.</p></div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="entry open">
+        <button class="entry-head is-flush" aria-expanded="true" aria-controls="e-threads">
+          <span class="entry-title-row"><span class="entry-title">Threads — a blog about AI in real-world work</span><span class="entry-toggle" aria-hidden="true"></span></span>
+        </button>
+        <div class="threads-link"><a href="https://www.threads.com/@vbondarenko_">@vbondarenko_</a></div>
+        <div class="entry-body" id="e-threads" role="region">
+          <div class="entry-body-inner"><div class="entry-body-content">
+            <p><strong>Daily content pipeline:</strong> set up a scheduled task in Claude Cowork — twice a day it automatically collects AI news and adds them to a Notion database with metadata. I pick topics from the database and publish to Threads. A full AI-augmented content workflow, runs without me.</p>
+          </div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Work Experience</div>
+    <div class="section-hint">→ click to collapse a block</div>
+    <div class="entries">
+
+      <div class="entry open">
+        <button class="entry-head" aria-expanded="true" aria-controls="e-dr">
+          <span class="entry-title-row"><span class="entry-title">Online marketing manager</span><span class="entry-toggle" aria-hidden="true"></span></span>
+          <span class="entry-meta">Dr. Reddy's Laboratories · 2019&ndash;2025</span>
+          <span class="entry-teaser">Content management for an international pharma company's website. ~60&ndash;75 units per month, 6 years.</span>
+        </button>
+        <div class="entry-body" id="e-dr" role="region">
+          <div class="entry-body-inner"><div class="entry-body-content">
+            <div class="field"><span class="field-label">Challenge</span><p>Content management for the corporate website of an international pharmaceutical company.</p></div>
+            <div class="field"><span class="field-label">Solution</span>
+              <ul>
+                <li>Regular publishing: ~30&ndash;40 promotional materials for brand managers, ~20 videos, ~10 news items, 3&ndash;4 email campaigns, and 2 surveys per month. ~60&ndash;75 content units per month total.</li>
+                <li>Maintained a stable content stream for 6 years in parallel with my own entrepreneurial projects (Lion Race, Wine Run Porto).</li>
+              </ul>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Education</div>
+    <div class="edu-block">
+      <p><strong>Doctoral studies</strong> (dissertation not defended) · Materials Science · Textile and Light Industry Manufacturing.</p>
+      <p>Passed three PhD qualifying exams: major field, English, <strong>philosophy</strong> (core interest — structural thinking, epistemology).</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Contacts</div>
+    <div class="contacts">
+      <div class="contact-row"><span class="contact-key">Email</span><span class="contact-val"><a href="mailto:pqp.msk.bondarenko@gmail.com">pqp.msk.bondarenko@gmail.com</a></span></div>
+      <div class="contact-row"><span class="contact-key">Telegram</span><span class="contact-val"><a href="https://t.me/vad6272">@vad6272</a></span></div>
+      <div class="contact-row"><span class="contact-key">LinkedIn</span><span class="contact-val"><a href="https://www.linkedin.com/in/vadim-bondarenko-ai/">linkedin.com/in/vadim-bondarenko-ai</a></span></div>
+      <div class="contact-row"><span class="contact-key">Instagram</span><span class="contact-val"><a href="https://www.instagram.com/vbondarenko_/">@vbondarenko_</a></span></div>
+      <div class="contact-row"><span class="contact-key">Location</span><span class="contact-val">Remote · Europe · Dual citizenship: RU + EU</span></div>
+      <div class="contact-row"><span class="contact-key">Languages</span><span class="contact-val">Russian — native · English — working written proficiency (read/write with AI assist), spoken — beginner</span></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Built with Claude Code · <a href="https://github.com/vbondarenko7/cv">view source on GitHub</a>
+</footer>
+
+<script>
+  document.querySelectorAll('.entry-head').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var entry = btn.closest('.entry');
+      var open = entry.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
+    });
+  });
+</script>
+
+</body>
+</html>
